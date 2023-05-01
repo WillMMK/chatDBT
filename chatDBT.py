@@ -87,6 +87,12 @@ def initialize_dbt_chatbot():
     agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbose=True, max_iterations=5)
     return agent 
 agent = initialize_dbt_chatbot()
-question = input ("Hi I am chatDBT! Ask me any questions about dbt: ")
 
-agent.run(question)
+while True:
+    question = input("Hi, I am chatDBT! Ask me any question about dbt or type 'quit' to exit: ")
+    
+    if question.lower() == 'quit':
+        print("Goodbye! If you have more questions in the future, feel free to ask.")
+        break
+    
+    agent.run(question)
