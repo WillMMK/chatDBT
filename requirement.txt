@@ -1,0 +1,7 @@
+openai
+langchain==0.0.153
+unstructured
+chromadb
+tiktoken
+tqdm 
+bs4 
